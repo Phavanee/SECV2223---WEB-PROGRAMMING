@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Author: Phavanee, Description: Project page for my portfolio, Created: 8th May 2025">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <title>My projects</title>
+</head>
+
+<body>
+    <header class="flex">
+        <div id="logo">
+            <a href="index.html" aria-label="Homepage"><img src="./images/logo.webp" height="40" alt="Site logo"></a>
+        </div>
+        <nav class="nav" id="mynav">
+            <ul>
+                <li><a href="./index.html" aria-label="Homepage">Home</a></li>
+                <hr style="height:0.5px;width:50%;color:gray;background-color:gray">
+                <li><a href="./about.html" aria-label="About page">About</a></li>
+                <hr style="height:0.5px;width:50%;color:gray;background-color:gray">
+                <li><a href="./projects.html" aria-label="Project page">Projects</a></li>
+            </ul>
+            <span><a href="#" class="nav-icon" onclick="showMenu()" aria-label="navigation"><i
+                        class="fa fa-bars"></i></a></span>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>Projects</h1>
+        <div class="grid">
+            <article class="cell" id="one">
+                <h2>Landing page</h2>
+                <img src="./images/landing-page.webp" alt="landing page screenshot">
+                <p>A few years ago, I came across The Odin Project and worked on a few of its exercises for front-end web development. One of the projects was a landing page, which I worked on for days. You can view the <a href="https://github.com/Phavanee/landing-page" target="_blank" aria-label="Github">source code</a> and <a href="https://phavanee.github.io/landing-page/" target="_blank" aria-label="Github">finished website</a> by following the links.</p>
+            </article>
+            <article class="cell" id="two">
+                <h2>ROSALIND</h2>
+                <img src="./images/rosalind-logo.webp" alt="rosalind logo">
+                <p>I like working on problems that require algorithmic solutions, so a few years ago I started working on ROSALIND, a platform for learning bioinformatics and programming and solving the questions that they had. I decided to compile my solutions into a <a href="https://github.com/Phavanee/rosalind-solutions" target="_blank" aria-label="Github">Github repository</a>, so that I can look back on it in the future.</p>
+            </article>
+            <article class="cell" id="three">
+                <h2>miniquasi</h2>
+                <img src="./images/miniquasi.webp" alt="image of woman working on text editor with purple background and two cats">
+                <p>miniquasi is a project that a friend and I started. We wanted to create a small text editor, not to fill any gaps in the market, but just to practice our skills. To this day, none of us have updated <a href="https://github.com/Phavanee/miniquasi-text-editor" target="_blank" aria-label="Github">the repository</a>.</p>
+            </article>
+        </div>
+    </div>
+    <footer class="footer flex">
+        <div id="connect">
+            <div id="call-to-action">
+                <h2>Let's connect!</h2>
+                <p>Leave a message using the form or on LinkedIn! If you like my work, feel free to follow my Github and
+                    Medium.
+                    Let's get to know each other and work together!</p>
+            </div>
+            <div id="socmed-links">
+                <a href="https://medium.com/@katve" aria-label="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+                <a href="https://www.linkedin.com/in/phavanee-p-941686290/" aria-label="LinkedIn" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/Phavanee" aria-label="Github" target="_blank"><i
+                        class="fa fa-github"></i></a>
+            </div>
+        </div>
+        <div id="contact-form">
+            <form action="#">
+                <input type="text" placeholder="Your Name" name="name">
+                <textarea name="message" aria-label="message">Your message...</textarea>
+                <input type="submit" value="Get in touch!">
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>

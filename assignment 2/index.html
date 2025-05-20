@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Author: Phavanee, Description: Homepage for my portfolio, Created: 6th May 2025">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <title>Home | Phavanee</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="flex">
+            <div id="logo">
+                <a href="index.html" aria-label="Homepage"><img src="./images/logo.webp" height="40" alt="Site logo"></a>
+            </div>
+            <nav class="nav" id="mynav">
+                <ul>
+                    <li><a href="./index.html" aria-label="Homepage">Home</a></li>
+                    <hr style="height:0.5px;width:50%;color:gray;background-color:gray">
+                    <li><a href="./about.html" aria-label="About page">About</a></li>
+                    <hr style="height:0.5px;width:50%;color:gray;background-color:gray">
+                    <li><a href="./projects.html" aria-label="Project page">Projects</a></li>
+                </ul>
+                <span><a href="#" class="nav-icon" onclick="showMenu()" aria-label="navigation"><i
+                            class="fa fa-bars"></i></a></span>
+            </nav>
+        </header>
+        <div class="content-body">
+            <section class="hero flex">
+                <div class="top flex">
+                    <div class="left">
+                        <article id="hero-text">
+                            <h1>
+                                👋
+                                <br>
+                                Hi there!
+                                <br>
+                                I'm Phavanee.
+                            </h1>
+                            <p>I'm an aspiring... something, and currently a second year student in Bioinformatics.
+                                Thanks
+                                for checking out my portfolio!
+                            </p>
+                            <div class="bottom flex">
+                                <a href="https://github.com/Phavanee" aria-label="Github" target="_blank"><button
+                                        class="button github"><i class="fa fa-github"></i>Check
+                                        out my Github</button></a>
+                                <a href="https://www.linkedin.com/in/phavanee-p-941686290/" aria-label="LinkedIn"
+                                    target="_blank"><button class="button linkedin"><i class="fa fa-linkedin"></i>Let's
+                                        connect!</button></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="right">
+                        <img src="./images/Phavanee.webp" alt="picture of me in a blazer" id="main-img">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="footer flex">
+       
+        <div id="connect">
+            <div id="call-to-action">
+                <h2>Let's connect!</h2>
+                <p>Leave a message using the form or on LinkedIn! If you like my work, feel free to follow my Github and Medium.
+                    Let's get to know each other and work together!</p>
+            </div>
+            <div id="socmed-links">
+                <a href="https://medium.com/@katve" aria-label="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+                <a href="https://www.linkedin.com/in/phavanee-p-941686290/" aria-label="LinkedIn" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/Phavanee" aria-label="Github" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+        
+        <div id="contact-form">
+            <form action="#">
+                <input type="text" placeholder="Your Name" name="name">
+                <textarea name="message" aria-label="message">Your message...</textarea>
+                <input type="submit" value="Get in touch!">
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>
