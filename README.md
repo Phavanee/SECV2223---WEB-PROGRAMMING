@@ -9,7 +9,7 @@
   <li><a href="https://github.com/Phavanee/SECV2223---WEB-PROGRAMMING/blob/main/submission%20a01.pdf">assignment 1</a></li>
   <li><a href="https://github.com/Phavanee/SECV2223---WEB-PROGRAMMING/tree/main/assignment%202">assignment 2</a>, deployed <a href="https://github.com/Phavanee/phavanee.github.io">here.</a></li>
   <li>assignment 3</li>
-  <li>group project</li>
+  <li><a href="https://github.com/Phavanee/SECV2223---WEB-PROGRAMMING/tree/main/group_project">group project</a>, deployed <a href="samplestudee.ct.ws">here.</a></li>
 </ul>
 
 <!-- <img src="https://media.licdn.com/dms/image/v2/D5612AQE8CnLA3JYugQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721169884883?e=2147483647&v=beta&t=xbqKctcyC6Ewq7tAfl2sDZBChDtiZpOValLkP_n_4PQ" height="200"/> -->
