@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="home.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Find Jobs</a></li>
+                <li><a href="applications.html">Applications</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/student.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Rate Worker Name</h2>
+
+        <div class="stars" id="star-container">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+
+        <textarea placeholder="Write your review here..."></textarea>
+        <br>
+        <button class="btn-post" onclick="submitReview()">Submit</button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = urlParams.get('job_id');
+        const workerId = urlParams.get('employer_id');
+        const workerName = urlParams.get('employer_name');
+
+        document.querySelector("h2").textContent = `Rate ${workerName}`;
+
+        let selectedRating = 1;
+        const stars = document.querySelectorAll('.star');
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseover', () => highlightStars(index + 1));
+            star.addEventListener('mouseout', () => highlightStars(selectedRating));
+            star.addEventListener('click', () => {
+                selectedRating = index + 1;
+                highlightStars(selectedRating);
+            });
+        });
+
+        function highlightStars(rating) {
+            stars.forEach((star, index) => {
+                star.classList.toggle('selected', index < rating);
+                star.classList.toggle('hover', index < rating);
+            });
+        }
+    </script>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            initRatingStars();
+        });
+    </script>
+
+    <footer class="footer">
+        <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+    </footer>
+</body>
+
+</html>

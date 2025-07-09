@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudeeWork | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="home.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Find Jobs</a></li>
+                <li><a href="applications.html">Applications</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/student.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+    <!-- Main Search Section -->
+    <section class="search-section">
+        <h1>Earn While You Learn<span class="highlight"></span></h1>
+        <p>Find your next gig in campus</p>
+        <div class="search-bar">
+            <form method="get" action="results.php">
+                <input type="text" placeholder="Job title or keyword" name="title" id="jobTitle">
+                <input type="text" placeholder="Location (e.g., Florence, Italy)" name="location" id="location">
+                <button type="submit">Search</button>
+                <!-- <button onclick="searchJobs()">Search</button> -->
+            </form>
+        </div>
+    </section>
+    <div class="container">
+        <!-- Jobs Section -->
+        <section class="jobs-section">
+            <div class="jobs-header">
+                <h2>All Jobs</h2>
+                <div class="sort-controls">
+                    <select id="sortBy" onchange="loadJobs()">
+                        <option value="created_at">Sort by Date Posted (Newest)</option>
+                        <option value="created_at_asc">Sort by Date Posted (Oldest)</option>
+                        <option value="title">Sort by Job Title</option>
+                        <option value="location">Sort by Location</option>
+                        <option value="tags">Sort by Tags</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="jobs-container" id="jobsContainer">
+                <!-- Job cards will be dynamically loaded here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/06/10/14/20250610145325-M5UJZ1FE.js"></script>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+    </footer>
+</body>
+
+</html>

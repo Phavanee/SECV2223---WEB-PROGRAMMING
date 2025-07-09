@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Referencing the merged style.css -->
+    <title>My Applications</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="home.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Find Jobs</a></li>
+                <li><a href="applications.html">Applications</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/student.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+
+    <div class="history-container">
+
+        <div class="greeting">
+            <h1>👋<br>Hello, Name </h1>
+        </div>
+        <br>
+
+        <div class="application-header-row">
+            <div class="application-history-header">
+                <span>
+                    <h2>Application History</h2>
+                </span>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab(event, 'all-tab')">All</button>
+            <button class="tab" onclick="switchTab(event, 'completed-tab')">Completed</button>
+        </div>
+
+        <div class="controls">
+            <div class="sort-controls">
+                <select id="sortBy" onchange="loadStudentApplications()">
+                    <option value="created_at">Sort by Date Applied (Newest)</option>
+                    <option value="created_at_asc">Sort by Date Applied (Oldest)</option>
+                    <option value="title">Sort by Job Title</option>
+                    <option value="location">Sort by Location</option>
+                    <option value="tags">Sort by Tags</option>
+                    <option value="status">Sort by Status</option>
+                </select>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search Applications" onkeyup="filterTable()">
+                <button class="btn">Filter</button>
+            </div>
+        </div>
+
+        <div id="all-tab" class="tab-content" style="display: block;">
+            <table id="studentApplicationsTable">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Location</th>
+                        <th>Tags</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filled by JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="completed-tab" class="tab-content" style="display: none;">
+            <table id="completed">
+                <thead>
+                    <tr>
+                        <th>Employer Name</th>
+                        <th>Job Title</th>
+                        <th>Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filled by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/06/10/14/20250610145325-M5UJZ1FE.js"></script>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+        <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+    </footer>
+
+</body>
+
+</html>

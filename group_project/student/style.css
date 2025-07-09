@@ -1,0 +1,1008 @@
+/* Global styles (applicable to all HTML files) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+.nav-menu ul li {
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-menu ul li a:hover {
+    color: #007bff;
+    text-decoration: none;
+    transition-duration: 300ms;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.logout-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #dc3545;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+.logout-link:hover {
+    background-color: white;
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.search-section {
+    text-align: center;
+    /* margin-top: 50px; */
+    background-image: url('../images/search-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding: 150px 0px;
+    color: white;
+    font-size: 32px;
+}
+
+.search-section h1 {
+    font-size: 48px;
+    padding: 12px;
+}
+
+.search-section .highlight {
+    color: black;
+}
+
+.search-section .search-bar {
+    margin-top: 20px;
+}
+
+.search-section input {
+    padding: 15px;
+    margin-right: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.search-section button {
+    padding: 12px 25px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background-color: #ece6e6;
+    color: black;
+}
+
+.jobs-section {
+    margin-top: 50px;
+}
+
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 42%;
+    padding: 20px;
+    text-align: left;
+    margin: 10px;
+}
+
+.job-card h3 {
+    font-size: 18px;
+    color: #343a40;
+}
+
+.job-card p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.job-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-card button:hover {
+    background-color: #218838;
+}
+
+.tags-container {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-right: 8px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+button.applied {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
+button.applied:hover {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
+.footer {
+    background-color: black;
+    padding: 50px 0px;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+/* APPLICATION PAGE */
+
+/* Scoped styles for history.html */
+.history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.history-container header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-container header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.history-container header p {
+    color: #777;
+}
+
+.history-container .status-date {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #777;
+}
+
+.history-container .status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.history-container .status-date-range {
+    display: flex;
+    align-items: center;
+}
+
+.history-container .status-date-range span {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.history-container .calendar-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Flexbox to align Application History header and Search/Filter in a row */
+.history-container .application-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.history-container .application-history-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.history-container .search-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.history-container .search-input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+}
+
+.history-container .filter-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+/* .history-container .tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+.history-container .tab-button {
+    background-color: transparent;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #777;
+    position: relative;
+}
+
+.history-container .tab-button.active {
+    color: black;
+    font-weight: bold;
+}
+
+.history-container .tab-button.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+.history-container .tab-button:hover {
+    color: #333;
+} */
+
+.history-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-container th,
+.history-container td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.history-container th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.history-container .status {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.history-container .status.in-review {
+    color: orange;
+}
+
+.history-container .status.shortlisted {
+    color: green;
+}
+
+.history-container .status.offered {
+    color: blue;
+}
+
+.history-container .status.interviewing {
+    color: purple;
+}
+
+.history-container .status.unsuitable {
+    color: red;
+}
+
+/* Profile section */
+.profile-section {
+    margin-top: 20px;
+}
+
+.profile-section h2 {
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+/* Profile section */
+.profile-section {
+    margin-top: 20px;
+}
+
+/* Profile Photo Section */
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-description {
+    margin-right: 20px;
+    /* Space between the description and the dashed box */
+    flex-basis: 30%;
+    /* Adjust the width of the description */
+}
+
+.profile-photo-description p {
+    margin: 5px 0;
+}
+
+/* Profile Photo Section */
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-description {
+    margin-right: 20px;
+    flex-basis: 30%;
+}
+
+.profile-photo-description p {
+    margin: 5px 0;
+}
+
+/* Profile Photo Box */
+.profile-photo-img {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center everything horizontally */
+    position: relative;
+    gap: 25px;
+    /* Add space between the icon and the button */
+    flex-direction: row-reverse;
+    /* Swap the order: icon on the right, dashed box on the left */
+}
+
+.profile-img {
+    width: 100px;
+    /* Profile image size */
+    height: 100px;
+    border-radius: 50%;
+    /* Circle shape */
+    object-fit: cover;
+    /* Ensure image fits well */
+}
+
+.profile-photo-img .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Make it circular */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.upload-btn {
+    background-color: #000000;
+    /* Matching blue (like 'Save Profile') */
+    color: white;
+    padding: 12px 30px;
+    /* Ensure similar padding to the 'Save Profile' button */
+    font-size: 16px;
+    /* Same text size */
+    border: none;
+    border-radius: 100px;
+    /* Rounded corners to match 'Save Profile' */
+    cursor: pointer;
+    text-align: center;
+    /* Center the text inside the button */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+    width: auto;
+    /* Allow width to adjust based on content */
+    display: block;
+    /* Ensure block-level to allow for centering */
+    margin: 0 auto;
+    /* Center the button horizontally */
+}
+
+.upload-btn:hover {
+    background-color: #000000;
+    /* Darker shade on hover, same as 'Save Profile' */
+    transition-duration: 0.3s;
+    /* Smooth transition for hover */
+}
+
+.profile-photo-img .upload-btn {
+    background-color: #e7e7e7;
+    /* White background */
+    color: rgb(0, 0, 0);
+    /* Black text color */
+    padding: 12px 25px;
+    /* Padding to make the button larger */
+    font-size: 14px;
+    /* Text size */
+    border: 1px dashed #000000;
+    /* Dashed black border */
+    border-radius: 15px;
+    /* Rounded corners */
+    cursor: pointer;
+    height: 200px;
+    /* Adjust the height to your preference */
+    width: 300px;
+    /* Set a fixed width for the button */
+    text-align: center;
+    /* Center the text inside */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    /* Add smooth transition for hover effect */
+    display: block;
+    /* Block-level for centering */
+    margin: 0 auto;
+    /* Center the button horizontally */
+}
+
+.profile-photo-img .upload-btn:hover {
+    background-color: #ffffff;
+    /* Blue background on hover */
+    color: rgb(0, 0, 0);
+    /* White text on hover */
+    border-color: #003c99;
+    /* Darker blue border on hover */
+}
+
+/* Profile description */
+.profile-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Separator line */
+.separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+    /* Space around the separator */
+    width: 100%;
+    /* Make the separator take full width */
+}
+
+
+/* Personal Details Section - Grid Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* Space between the columns */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Account type section */
+.account-type {
+    margin-top: 20px;
+}
+
+.account-type label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Adjusting the text under "Account Type" */
+.account-type-description {
+    font-weight: normal;
+    /* Unbold the text */
+    font-size: 14px;
+    /* Make the text smaller */
+}
+
+
+/* Save profile button */
+.save-btn {
+    background-color: #000000;
+    /* Matching blue */
+    color: white;
+    padding: 12px 25px;
+    /* Increase padding for a bigger button */
+    font-size: 16px;
+    /* Text size */
+    border: none;
+    border-radius: 50px;
+    /* Rounded corners */
+    cursor: pointer;
+    width: auto;
+    /* Allow width to be adjusted based on content */
+    text-align: center;
+    /* Center align the text inside */
+    transition: background-color 0.3s ease;
+    /* Add a smooth transition for hover effect */
+    display: block;
+    /* Make it block-level to use margin for centering */
+    margin: 0 auto;
+    /* Auto margin for centering */
+}
+
+/* Save profile button hover effect */
+.save-btn:hover {
+    background-color: #007bff;
+    /* Darker blue on hover */
+    transition-duration: 0.3s;
+    /* Smooth transition */
+}
+
+/* Specific class for job-seeker form and employer form */
+.job-seeker-form,
+.employer-form {
+    display: block;
+}
+
+/* To handle the account type selection */
+input[name="account-type"]:checked~.job-seeker-form {
+    display: block;
+}
+
+input[name="account-type"]:checked~.employer-form {
+    display: none;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    /* Space between form fields */
+}
+
+/* Flex Layout for Personal Details */
+.personal-details-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.personal-details-label {
+    flex-basis: 20%;
+    /* Align the label to the left */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.personal-details-form {
+    flex-basis: 80%;
+    /* Align the form fields to the right */
+}
+
+.personal-details-form .input-group {
+    margin-bottom: 20px;
+}
+
+.personal-details-form .input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.personal-details-form .input-group input,
+.personal-details-form .input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.personal-details-label,
+.account-type-label {
+    flex-basis: 20%;
+    /* Both labels take up 20% width */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.personal-details-form,
+.account-type-options {
+    flex-basis: 80%;
+    /* Form fields take the remaining space */
+}
+
+.personal-details-form .input-group {
+    margin-bottom: 20px;
+}
+
+.personal-details-form .input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.personal-details-form .input-group input,
+.personal-details-form .input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Flex Layout for Account Type */
+.account-type-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.account-type-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.account-type-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between each radio button */
+}
+
+/* Style the description text under radio buttons */
+.account-type-options p {
+    font-size: 14px;
+    color: #6c757d;
+    /* Gray color for description text */
+    margin-left: 25px;
+    /* Indentation to match the radio button's position */
+}
+
+/* Input fields styling for consistency */
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin-left: -20px;
+    /* Adjust this value as needed to shift the text */
+}
+
+.footer {
+    background-color: black;
+    padding: 50px 0px;
+    margin-top: 24px;
+    text-align: center;
+    color: white;
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    color: black;
+}
+
+.tab.active {
+    color: black;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+.controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.sort-controls select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.sort-controls select:hover {
+    border-color: #007bff;
+}
+
+.sort-controls select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+.btn.active {
+    background-color: black;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.history-container {
+    flex: 1;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.footer {
+    background-color: black;
+    padding: 50px 0px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+
+.rate-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 8px rgba(76, 101, 245, 0.2);
+    margin-left: 5px;
+}
+
+.rate-btn:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.star {
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.star.hover,
+.star.selected {
+    color: #FFD700;
+}
+
+.container {
+    flex: 1;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.btn-post {
+    background-color: black;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+}
+
+/* Remove button styling */
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+.remove-btn:active {
+    background-color: #bd2130;
+}
