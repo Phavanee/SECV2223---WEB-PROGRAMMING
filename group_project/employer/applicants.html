@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View Applicants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="home.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Post Jobs</a></li>
+                <li><a href="applicants.html">Applicants</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/employer.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <div class="title-row">
+                <h2>
+                    Applicants
+                </h2>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab(event, 'applicants')">Applicants</button>
+            <button class="tab" onclick="switchTab(event, 'analytics')">Rate</button>
+        </div>
+
+
+
+        <div class="tab-content" id="applicants">
+            <div class="controls">
+                <div class="sort-controls">
+                    <select id="sortBy" onchange="loadApplicants()">
+                        <option value="created_at">Sort by Date Applied (Newest)</option>
+                        <option value="created_at_asc">Sort by Date Applied (Oldest)</option>
+                        <option value="title">Sort by Job Title</option>
+                        <option value="name">Sort by Applicant Name</option>
+                        <option value="email">Sort by Email</option>
+                        <option value="status">Sort by Status</option>
+                    </select>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search Applicants" onkeyup="filterTable()">
+                </div>
+                <div>
+                    <button class="btn active">Search</button>
+                </div>
+            </div>
+            <table id="applicantsTable">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Applicant Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- js shd load stuff here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="analytics" class="tab-content" style="display:none;">
+            <div class="controls">
+                <div class="left">
+                    <h3>Previous Students</h3>
+                    <p style="color: #7e7e7e;"><em>Only students who have completed jobs will show up here.</em></p>
+                </div>
+                <div class="right" style="display: flex;">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search Applicants" onkeyup="filterTable()">
+                    </div>
+                    <div>
+                        <button class="btn active">Search</button>
+                    </div>
+                </div>
+            </div>
+            <table id="analyticsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position / Job</th>
+                        <th>Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- filled with js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+    </footer>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/06/10/14/20250610145325-M5UJZ1FE.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

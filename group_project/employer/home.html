@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Job Details</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="home.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Post Jobs</a></li>
+                <li><a href="applicants.html">Applicants</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/employer.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="greeting">
+            <h1>👋<br>Hello, Name </h1>
+        </div>
+        <br>
+        <div class="title-row">
+            <div class="title-text">
+                <h2>Jobs You've Posted</h2>
+            </div>
+            <div class="controls">
+                <div class="sort-controls">
+                    <select id="sortBy" onchange="loadJobs()">
+                        <option value="created_at">Sort by Date Posted (Newest)</option>
+                        <option value="created_at_asc">Sort by Date Posted (Oldest)</option>
+                        <option value="title">Sort by Job Title</option>
+                        <option value="location">Sort by Location</option>
+                        <option value="tags">Sort by Tags</option>
+                    </select>
+                </div>
+                <a href="add_job.html" class="add-job-btn">Add New Job</a>
+            </div>
+        </div>
+
+        <!-- Job cards grid -->
+        <div class="jobs-container" id="jobsContainer">
+            <!-- JavaScript will dynamically insert job cards here -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('job_posted') === '1') {
+            alert('Job posted successfully!');
+            // Optionally, remove the parameter from the URL so the alert doesn't show again on refresh
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+
+</body>
+
+</html>

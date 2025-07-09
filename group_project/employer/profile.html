@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Settings</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="home.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Post Jobs</a></li>
+                <li><a href="applicants.html">Applicants</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="../logout.php" class="logout-link">Logout</a>
+            <a href="profile.html"><img src="../images/employer.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <header>
+            <h1>Settings</h1>
+        </header>
+
+        <div class="profile-section">
+            <h2>Basic Information</h2>
+            <p class="profile-description">Your personal information that you can update anytime.</p>
+            <hr class="separator">
+
+            <div class="profile-photo">
+                <div class="profile-photo-description">
+                    <h3>Profile photo</h3>
+                    <p class="profile-description">This image will be shown publicly as your profile picture, it will
+                        help students recognize you!</p>
+                </div>
+                <div class="profile-photo-img">
+                    <img src="../images/employer.png" alt="Profile Photo" class="profile-img">
+                </div>
+            </div>
+            <hr class="separator">
+
+            <!-- Personal Details Section -->
+            <div class="personal-details-section">
+                <div class="personal-details-label">
+                    <h3>Personal Details</h3>
+                </div>
+                <div class="personal-details-form">
+                    <form action="#" method="POST">
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label for="full-name">Full Name <span>*</span></label>
+                                <input type="text" id="full-name" name="full-name">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="phone-number">Phone Number <span>*</span></label>
+                                <input type="tel" id="phone-number" name="phone-number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Email <span>*</span></label>
+                                <input type="email" id="email" name="email">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="location">Location <span>*</span></label>
+                                <select id="location" name="location" required>
+                                    <option value="ktdi">KTDI</option>
+                                    <option value="krp">KRP</option>
+                                    <option value="ktc">KTC</option>
+                                    <option value="kp">KP</option>
+                                    <option value="ktho">KTHO</option>
+                                    <option value="ktr">KTR</option>
+                                    <option value="ktf">KTF</option>
+                                    <option value="kdoj">KDOJ</option>
+                                    <option value="kdse">KDSE</option>
+                                    <option value="k9k10">K9K10</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="gender">Gender <span>*</span></label>
+                                <select id="gender" name="gender" required>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="separator">
+
+            <!-- Account Type Section -->
+            <div class="account-type-section">
+                <div class="account-type-label">
+                    <h3>Account Type</h3>
+                </div>
+                <div class="account-type-options">
+                    <label>
+                        <input type="radio" name="account-type" value="job-seeker" disabled> Job Seeker
+                    </label>
+                    <p>Looking for a job</p>
+                    <label>
+                        <input type="radio" name="account-type" value="employer" checked> Employer
+                    </label>
+                    <p>Hiring, sourcing candidates, or posting jobs</p>
+                </div>
+            </div>
+            <hr class="separator">
+            <button type="submit" class="save-btn">Save Profile</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+<footer class="footer">
+    <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+</footer>
+
+</html>

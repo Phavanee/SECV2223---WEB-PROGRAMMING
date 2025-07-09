@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Job</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 900px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="home.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Post Jobs</a></li>
+                <li><a href="applicants.html">Applicants</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/employer.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <form id="jobForm">
+            <div class="container">
+                <div class="section">
+                    <h2>Edit Job Details</h2>
+                    <p class="subtext">Update the description of the job, job scopes, location, and nice-to-haves.</p>
+                </div>
+
+                <div class="section">
+                    <div class="label">Title</div>
+                    <div class="subtext">Job titles must describe one position.</div>
+                    <textarea name="title" id="titleInput" class="input-box" maxlength="500"
+                        placeholder="Enter job title" required></textarea>
+                </div>
+
+                <div class="section">
+                    <div class="label">Location</div>
+                    <div class="subtext">Add the job's location</div>
+                    <textarea name="location" id="locationInput" class="input-box" maxlength="500" placeholder="Enter location"
+                        required></textarea>
+                </div>
+
+                <div class="section">
+                    <div class="label">Tags</div>
+                    <div class="subtext">Add some tags to describe the job in a comma-separated list.</div>
+                    <textarea name="tags" id="tagsInput" class="input-box" maxlength="500"
+                        placeholder="Enter tags"></textarea>
+                </div>
+
+                <!-- Hidden job ID field -->
+                <input type="hidden" id="jobIdInput" value="">
+
+                <button class="btn-post" type="submit">Update Job</button>
+            </div>
+        </form>
+
+    </div>
+    <footer class="footer">
+        <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+    </footer>
+
+    <script>
+        // Get job ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = urlParams.get('job_id');
+
+        if (!jobId) {
+            alert('No job ID provided');
+            window.location.href = 'home.html';
+        }
+
+        // Load job details
+        fetch(`get-job.php?job_id=${jobId}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    const job = data.job;
+                    document.getElementById('jobIdInput').value = job.id;
+                    document.getElementById('titleInput').value = job.title;
+                    document.getElementById('locationInput').value = job.location;
+                    document.getElementById('tagsInput').value = job.tags;
+                } else {
+                    alert('Failed to load job details: ' + data.message);
+                    window.location.href = 'home.html';
+                }
+            })
+            .catch(err => {
+                console.error('Error loading job:', err);
+                alert('Error loading job details');
+                window.location.href = 'home.html';
+            });
+
+        // Handle form submission
+        document.getElementById('jobForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const jobId = document.getElementById('jobIdInput').value;
+            const title = document.getElementById('titleInput').value;
+            const location = document.getElementById('locationInput').value;
+            const tags = document.getElementById('tagsInput').value;
+
+            if (!title || !location || !tags) {
+                alert('All fields are required');
+                return;
+            }
+
+            fetch('update-job.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    job_id: jobId,
+                    title: title,
+                    location: location,
+                    tags: tags
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Job updated successfully!');
+                    window.location.href = 'home.html';
+                } else {
+                    alert('Failed to update job: ' + data.message);
+                }
+            })
+            .catch(err => {
+                console.error('Error updating job:', err);
+                alert('Error updating job');
+            });
+        });
+    </script>
+</body>
+
+</html> 
