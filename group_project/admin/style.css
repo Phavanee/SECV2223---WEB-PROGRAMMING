@@ -1,0 +1,1263 @@
+/* Global styles (applicable to all HTML files) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+.nav-menu ul li {
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-menu ul li a:hover {
+    color: black;
+    text-decoration: none;
+    transition-duration: 300ms;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.logout-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #dc3545;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+.logout-link:hover {
+    background-color: white;
+    color: #dc3545;
+    text-decoration: none;
+}
+
+.search-section {
+    text-align: center;
+    background-color: black;
+    padding: 150px 0px;
+    color: white;
+}
+
+.search-section h1 {
+    font-size: 48px;
+    padding: 12px;
+}
+
+.search-section .highlight {
+    color: black;
+}
+
+.search-section .search-bar {
+    margin-top: 20px;
+}
+
+.search-section input {
+    padding: 15px;
+    margin-right: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    /* This removes the rounded corners */
+}
+
+.search-section button {
+    padding: 12px 25px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background-color: #ece6e6;
+    color: black;
+}
+
+.jobs-section {
+    margin-top: 50px;
+}
+
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 42%;
+    padding: 20px;
+    text-align: left;
+    margin: 10px;
+}
+
+.job-card h3 {
+    font-size: 18px;
+    color: #343a40;
+}
+
+.job-card p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.job-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-card button:hover {
+    background-color: #218838;
+}
+
+.tags-container {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-right: 8px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+button.applied {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
+button.applied:hover {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
+.footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Scoped styles for history.html */
+.history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.history-container header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-container header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.history-container header p {
+    color: #777;
+}
+
+.history-container .status-date {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #777;
+}
+
+.history-container .status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.history-container .status-date-range {
+    display: flex;
+    align-items: center;
+}
+
+.history-container .status-date-range span {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.history-container .calendar-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Flexbox to align Application History header and Search/Filter in a row */
+.history-container .application-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.history-container .application-history-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.history-container .search-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.history-container .search-input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.history-container .filter-button {
+    padding: 10px 20px;
+    background-color: #0099ff;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.history-container .tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.history-container .tab-button {
+    background-color: transparent;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #777;
+    position: relative;
+}
+
+.history-container .tab-button.active {
+    color: #4f71ff;
+    font-weight: bold;
+}
+
+.history-container .tab-button.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #4f71ff;
+}
+
+.history-container .tab-button:hover {
+    color: #333;
+}
+
+.history-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-container th,
+.history-container td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.history-container th {
+    background-color: #f1f8ff;
+    font-weight: bold;
+}
+
+.history-container .status {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.history-container .status.in-review {
+    color: orange;
+}
+
+.history-container .status.shortlisted {
+    color: green;
+}
+
+.history-container .status.offered {
+    color: blue;
+}
+
+.history-container .status.interviewing {
+    color: purple;
+}
+
+.history-container .status.unsuitable {
+    color: red;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px;
+    background-color: #4f71ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.pagination .page-number {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pagination button:hover {
+    background-color: #003c99;
+}
+
+/* Profile section */
+.profile-section {
+    margin-top: 20px;
+}
+
+.profile-section h2 {
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+/* Profile section */
+.profile-section {
+    margin-top: 20px;
+}
+
+/* Profile Photo Section */
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-description {
+    margin-right: 20px;
+    /* Space between the description and the dashed box */
+    flex-basis: 30%;
+    /* Adjust the width of the description */
+}
+
+.profile-photo-description p {
+    margin: 5px 0;
+}
+
+/* Profile Photo Section */
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-description {
+    margin-right: 20px;
+    flex-basis: 30%;
+}
+
+.profile-photo-description p {
+    margin: 5px 0;
+}
+
+/* Profile Photo Box */
+.profile-photo-img {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center everything horizontally */
+    position: relative;
+    gap: 25px;
+    /* Add space between the icon and the button */
+    flex-direction: row-reverse;
+    /* Swap the order: icon on the right, dashed box on the left */
+}
+
+.profile-img {
+    width: 100px;
+    /* Profile image size */
+    height: 100px;
+    border-radius: 50%;
+    /* Circle shape */
+    object-fit: cover;
+    /* Ensure image fits well */
+}
+
+.profile-photo-img .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Make it circular */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.upload-btn {
+    background-color: #000000;
+    /* Matching blue (like 'Save Profile') */
+    color: white;
+    padding: 12px 30px;
+    /* Ensure similar padding to the 'Save Profile' button */
+    font-size: 16px;
+    /* Same text size */
+    border: none;
+    border-radius: 100px;
+    /* Rounded corners to match 'Save Profile' */
+    cursor: pointer;
+    text-align: center;
+    /* Center the text inside the button */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+    width: auto;
+    /* Allow width to adjust based on content */
+    display: block;
+    /* Ensure block-level to allow for centering */
+    margin: 0 auto;
+    /* Center the button horizontally */
+}
+
+.upload-btn:hover {
+    background-color: #000000;
+    /* Darker shade on hover, same as 'Save Profile' */
+    transition-duration: 0.3s;
+    /* Smooth transition for hover */
+}
+
+.profile-photo-img .upload-btn {
+    background-color: #e7e7e7;
+    /* White background */
+    color: rgb(0, 0, 0);
+    /* Black text color */
+    padding: 12px 25px;
+    /* Padding to make the button larger */
+    font-size: 14px;
+    /* Text size */
+    border: 1px dashed #000000;
+    /* Dashed black border */
+    border-radius: 15px;
+    /* Rounded corners */
+    cursor: pointer;
+    height: 200px;
+    /* Adjust the height to your preference */
+    width: 300px;
+    /* Set a fixed width for the button */
+    text-align: center;
+    /* Center the text inside */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    /* Add smooth transition for hover effect */
+    display: block;
+    /* Block-level for centering */
+    margin: 0 auto;
+    /* Center the button horizontally */
+}
+
+.profile-photo-img .upload-btn:hover {
+    background-color: #ffffff;
+    /* Blue background on hover */
+    color: rgb(0, 0, 0);
+    /* White text on hover */
+    border-color: #003c99;
+    /* Darker blue border on hover */
+}
+
+/* Profile description */
+.profile-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Separator line */
+.separator {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+    /* Space around the separator */
+    width: 100%;
+    /* Make the separator take full width */
+}
+
+
+/* Personal Details Section - Grid Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    /* Space between the columns */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Account type section */
+.account-type {
+    margin-top: 20px;
+}
+
+.account-type label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Adjusting the text under "Account Type" */
+.account-type-description {
+    font-weight: normal;
+    /* Unbold the text */
+    font-size: 14px;
+    /* Make the text smaller */
+}
+
+
+/* Save profile button */
+.save-btn {
+    background-color: #000000;
+    /* Matching blue */
+    color: white;
+    padding: 12px 25px;
+    /* Increase padding for a bigger button */
+    font-size: 16px;
+    /* Text size */
+    border: none;
+    border-radius: 50px;
+    /* Rounded corners */
+    cursor: pointer;
+    width: auto;
+    /* Allow width to be adjusted based on content */
+    text-align: center;
+    /* Center align the text inside */
+    transition: background-color 0.3s ease;
+    /* Add a smooth transition for hover effect */
+    display: block;
+    /* Make it block-level to use margin for centering */
+    margin: 0 auto;
+    /* Auto margin for centering */
+}
+
+/* Save profile button hover effect */
+.save-btn:hover {
+    background-color: #003c99;
+    /* Darker blue on hover */
+    transition-duration: 0.3s;
+    /* Smooth transition */
+}
+
+/* Specific class for job-seeker form and employer form */
+.job-seeker-form,
+.employer-form {
+    display: block;
+}
+
+/* To handle the account type selection */
+input[name="account-type"]:checked~.job-seeker-form {
+    display: block;
+}
+
+input[name="account-type"]:checked~.employer-form {
+    display: none;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    /* Space between form fields */
+}
+
+/* Flex Layout for Personal Details */
+.personal-details-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.personal-details-label {
+    flex-basis: 20%;
+    /* Align the label to the left */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.personal-details-form {
+    flex-basis: 80%;
+    /* Align the form fields to the right */
+}
+
+.personal-details-form .input-group {
+    margin-bottom: 20px;
+}
+
+.personal-details-form .input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.personal-details-form .input-group input,
+.personal-details-form .input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.personal-details-label,
+.account-type-label {
+    flex-basis: 20%;
+    /* Both labels take up 20% width */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.personal-details-form,
+.account-type-options {
+    flex-basis: 80%;
+    /* Form fields take the remaining space */
+}
+
+.personal-details-form .input-group {
+    margin-bottom: 20px;
+}
+
+.personal-details-form .input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.personal-details-form .input-group input,
+.personal-details-form .input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Flex Layout for Account Type */
+.account-type-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.account-type-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.account-type-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between each radio button */
+}
+
+/* Style the description text under radio buttons */
+.account-type-options p {
+    font-size: 14px;
+    color: #6c757d;
+    /* Gray color for description text */
+    margin-left: 25px;
+    /* Indentation to match the radio button's position */
+}
+
+/* Input fields styling for consistency */
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: black;
+    padding: 50px 0px;
+    margin-top: 24px;
+    text-align: center;
+    color: white;
+}
+
+/* Scoped styles for verify.html */
+.verify-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.verify-heading {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.verify-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.verify-table th,
+.verify-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.verify-table th {
+    background-color: black;
+    color: white;
+}
+
+
+.verify-status {
+    padding: 4px 8px;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.verify-status-shortlisted {
+    background-color: #4caf50;
+}
+
+.verify-status-declined {
+    background-color: #f44336;
+}
+
+.verify-status-hired {
+    background-color: #2196f3;
+}
+
+.verify-select-all {
+    width: 20px;
+    height: 20px;
+}
+
+/* Styles for the applicant header and search section */
+.applicant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.verify-heading {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.applicant-options {
+    display: flex;
+    align-items: center;
+}
+
+.search-filter {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.search-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 250px;
+}
+
+.view-options-container {
+    display: flex;
+    /* Align buttons horizontally */
+    gap: 10px;
+    /* Add space between the buttons */
+    justify-content: center;
+    /* Center the buttons inside the container */
+    background-color: #fffefe;
+    /* Light background color for the container */
+    border: 1px solid #ccc;
+    /* Border around the container */
+    padding: 5px 15px;
+    /* Padding around the buttons inside the container */
+}
+
+/* Pipeline and Table View Buttons */
+/* View Buttons Styling */
+.view-btn {
+    padding: 12px 25px;
+    background-color: #fffefe;
+    /* Light background for inactive buttonsfffefe */
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    /* Remove the border */
+    border-radius: 5px;
+    /* Optional: rounded corners */
+}
+
+.view-btn.active {
+    background-color: #d2d2d2;
+    ;
+    /* White background for active button */
+    color: rgb(0, 0, 0);
+    /* Black text for active button */
+}
+
+.view-btn:hover {
+    background-color: #e0e0e0;
+    /* Slight darkening on hover for inactive buttons */
+    color: black;
+    /* Keep the text color black on hover */
+}
+
+.view-btn.active:hover {
+    background-color: #e0e0e0;
+    /* Slight darkening on hover for the active button */
+}
+
+.verify-table th,
+.verify-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.verify-table td input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.verify-status {
+    padding: 4px 8px;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.verify-status-shortlisted {
+    background-color: #4caf50;
+}
+
+.verify-status-declined {
+    background-color: #f44336;
+}
+
+.verify-status-hired {
+    background-color: #2196f3;
+}
+
+.verify-select-all {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style for DELETE button */
+.delete-btn {
+    padding: 8px 20px;
+    background-color: #f44336;
+    /* Red background for DELETE */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+    transform: scale(1.05);
+    /* Slight scaling effect on hover */
+}
+
+.delete-btn:focus {
+    outline: none;
+    /* Remove focus outline */
+}
+
+/* Pagination Styling */
+.verify-pagination {
+    display: flex;
+    justify-content: center;
+    /* Center the pagination */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Styling for all pagination buttons */
+.verify-pagination button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    /* Uniform font size */
+    border: none;
+    /* Remove border from buttons */
+    border-radius: 40px;
+    /* Rounded corners */
+
+}
+
+/* Active page button style (highlighted in blue) */
+.verify-pagination .active {
+    background-color: #000000;
+    /* Blue background for active page */
+    color: white;
+    /* White text */
+}
+
+/* Hover effect for pagination buttons */
+.verify-pagination button:hover {
+    background-color: #e0e0e0;
+    /* Slightly darker background when hovered */
+    color: black;
+}
+
+/* Style for pagination arrows (previous and next) */
+.verify-pagination .prev-btn,
+.verify-pagination .next-btn {
+    font-size: 18px;
+    /* Slightly larger font for arrows */
+    padding: 10px 15px;
+    border: none;
+    /* Remove borders from arrows as well */
+}
+
+/* Disabled buttons (to handle prev/next on the first/last page) */
+.verify-pagination .disabled {
+    background-color: #f1f1f1;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Make sure the arrows have the same style as the numbers */
+.verify-pagination .prev-btn,
+.verify-pagination .next-btn {
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background on hover for the arrows */
+.verify-pagination .prev-btn:hover,
+.verify-pagination .next-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.applicant-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Space between the buttons */
+    margin-bottom: 20px;
+    /* Space between the buttons and the separator */
+}
+
+.applicant-tab-btn {
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #777;
+    position: relative;
+}
+
+.applicant-tab-btn.active {
+    font-weight: bold;
+    color: #000;
+}
+
+.applicant-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    /* Reduced the gap between the underline and the button */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+/* Style for DELETE button */
+.verify-btn {
+    padding: 8px 20px;
+    background-color: black;
+    /* Red background for DELETE */
+    ;
+    color: white;
+    border: 1px solid black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.verify-btn:hover {
+    background-color: #ffffff;
+    /* Darker red on hover */
+    color: black;
+    border: 1px solid black;
+}
+
+.verify-btn:focus {
+    outline: none;
+    /* Remove focus outline */
+}
+
+/* Verified button style */
+.verified-btn {
+    padding: 8px 20px;
+    background-color: #ffffff;
+    /* Red background for DELETE */
+    color: green;
+    font-weight: bold;
+    border: solid green;
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: not-allowed;
+    /* Prevent clicking when verified */
+}
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    color: black;
+}
+
+.tab.active {
+    color: black;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+.controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+.btn.active {
+    background-color: black;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.verify-container {
+    flex: 1;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.footer {
+    background-color: black;
+    padding: 50px 0px;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}

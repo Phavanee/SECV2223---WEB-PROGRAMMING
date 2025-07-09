@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-menu">
+            <div class="logo-container">
+                <a href="verify.html"><img src="../images/logo.png" alt="StudeeWork Logo" class="logo"></a>
+            </div>
+            <ul>
+                <li><a href="verify.html">Verify</a></li>
+                <li><a href="moderate.html">Moderate</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <a href="profile.html"><img src="../images/admin.png" alt="Profile" class="profile-icon"></a>
+        </div>
+    </header>
+
+    <div class="verify-container">
+
+        <!-- <div class="greeting">
+            <h1>👋<br>Hello, Name </h1>
+            TODO php to add name here
+            im too tired
+            <br>
+            <br>
+        </div> -->
+
+        <div class="applicant-header">
+            <div class="verification-header">
+                <span>
+                    <h2 class="verify-heading">Account Verification</h2>
+                </span>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab(event, 'student-tab')">Student</button>
+            <button class="tab" onclick="switchTab(event, 'employer-tab')">Employer</button>
+        </div>
+
+        <div class="controls">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search Accounts" onkeyup="filterTable()">
+                <button class="btn">Filter</button>
+            </div>
+        </div>
+
+        <div id="student-tab" class="tab-content" style="display: block;">
+            <table class="verify-table" id="verifySTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- filled with js ltr -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="employer-tab" class="tab-content" style="display: none;">
+            <table class="verify-table" id="verifyETable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- filled with js ltr -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Byte Builders — Built as a project for SECV2223 Web Programming</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
